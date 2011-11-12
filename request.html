@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset= "utf-8" />
+    <title>Family CookBook - Request a Recipe</title>
+    <link rel="stylesheet" type="text/css" href="starbuzz.css" />
+<script>
+
+function goToAddRecipePage(){
+ window.location = "add-recipe.html";
+}
+
+function viewRecipe() {
+window.location = "view-recipe.html";
+}
+
+function browseRecipe() {
+ 
+window.location = "browse-recipes.html";
+	
+}
+</script>
+  </head> 
+
+  <body>
+   <div id="allcontent">
+    <div id="header">
+	<a href="home.html"> 
+		<img src="banner.png" alt="My Family Cookbook Banner" width="1024" height="200" />
+	</a>
+    </div>
+
+    <div id="main">
+      <p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+	<div id ="request">
+        <form>
+		<label for="Request a Recipe"</label>
+		Email: <input type="text" id ="email" placeholder="Enter email address" size="57" onclick="this.value='';">
+		<br/><br/>
+		Message: 
+		<br/>
+		<textarea rows="5" cols="50" onclick="this.value='';">
+		Enter a personalized message here.
+		</textarea>
+		<br/>
+		<input type="button" id="cancel" value = "Cancel" onclick="history.go(-1);">
+		<input type="button" id="submit" value="Submit" onclick="alert('Your request has been sent!');">
+		
+
+	</form>
+	</div>
+      </p>
+      </div>
+
+    <div id="footer">
+      &copy; 2011, Family CookBook
+      <br />
+      All trademarks and registered trademarks appearing on 
+      this site are the property of their respective owners.
+    </div>
+   </div>
+  </body>
+</html>
