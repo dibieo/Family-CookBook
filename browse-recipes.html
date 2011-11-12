@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Family Cookbook - Browse recipes</title>
+    <link rel="stylesheet" href="starbuzz2.css" />
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
+	<script src="jquery.js"></script>
+	<script src="development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="development-bundle/ui/jquery.ui.accordion.js"></script>
+	<script src="development-bundle/ui/jquery.ui.dialog.js"></script>
+	<script>
+	$(function() {
+			$( "#accordion" ).accordion({
+			autoHeight: false,
+			navigation: true,
+			animated: 'easeslide' 
+
+			});
+	});
+	
+	function addDinner() {
+	 
+		$("#sidebar").html("<img src='roast.jpg' width = '50%' height = '75%'/> <p> Roast dinner </p>");
+	}
+	</script>
+  </head> 
+
+  <body>
+   <div id="allcontent">
+    <div id="header">
+	<p id="family"><a href = "home.html">Family Cookbook </a></p>
+    </div>
+
+    <div id="main">
+     <div id="accordion">
+	<h3><a href="#">Occasion</a></h3>
+	<div>
+	<li><a href= "">Thanksgiving (4)</a></li>
+	<li><a href= "">Christmas (3)</a></li>
+	<li><a href= "">Hannukah (2)</a></li>
+	<li><a href= "">Independence Day (6)</a></li>
+	<li><a href= "">Hannukah (2)</a></li>
+	</div>
+	<h3><a href="#">Course</a></h3>
+	<div>
+	<li><a href= "">Appetizer (4)</a></li>
+	<li><a href= "">Breakfast (3)</a></li>
+	<li><a href= "">Lunch (12)</a></li>
+	<li><a href= "#" onClick= "addDinner()">Dinner (16)</a></li>
+	<li><a href= "">Dessert(12)</a></li>
+	</div>
+	<h3><a href="#">Creator</a></h3>
+	<div>
+	
+	<li><a href= "">John L. (4)</a></li>
+	<li><a href= "">Grand ma (3)</a></li>
+	<li><a href= "">Keri Nelson (5)</a></li>
+	<li><a href= "">Mum (6)</a></li>
+	<li><a href= "">Rose D(4)</a></li>
+	</div>
+	<h3><a href="#">Main ingredients</a></h3>
+	<div>
+	<li><a href= "">Beans (4)</a></li>
+	<li><a href= ""> Rice (3)</a></li>
+	<li><a href= "">Potatoes (5)</a></li>
+	<li><a href= "">Beef (2)</a></li>
+	<li><a href= "">Chicken (5)</a></li>
+	</div>
+</div>
+
+    </div>
+
+    <div id="sidebar">
+  
+    </div>
+
+    <div id="footer">
+      &copy; 2011 FamilyCookBook
+      <br />
+      All trademarks and registered trademarks appearing on 
+      this site are the property of their respective owners.
+    </div>
+   </div>
+  </body>
+</html>
