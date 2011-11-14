@@ -1,0 +1,32 @@
+* {margin:0;padding:0;}
+html{
+	height: 100%;
+}
+
+body {
+	height: 100%;
+    background-color: #DF4500;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: small;
+}
+#header {
+    height: 108px;
+    color: #EFE5D0;
+    background-color: #8B1A1A;
+}
+#family {
+    font-size: 200%;
+}
+#allcontent {
+    background-color: #DF4500;
+}
+#wrap {
+	min-height: 92%;
+}
+	
+#footer {
+	position: relative;
+	clear:both;
+    font-size: 80%;
+    text-align: center;
+}
