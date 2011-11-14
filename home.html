@@ -3,21 +3,9 @@
   <head>
     <meta charset= "utf-8" />
     <title>Family CookBook - Home</title>
-    <link rel="stylesheet" href="global.css" />
-    <script src = "slides.min.jquery.js" > </script>
-    <script>
-    	$(function(){
-			$('#slides').slides({
-				preload: true,
-				preloadImage: 'img/loading.gif',
-				play: 5000,
-				pause: 2500,
-				hoverPause: true
-			});
-		});
-    </script>
-
-    <script>
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <link rel="stylesheet" type="text/css" href="Template.css" />
+<script>
 
 function goToAddRecipePage(){
  window.location = "add-recipe.html";
@@ -36,6 +24,7 @@ window.location = "browse-recipes.html";
   </head> 
 
   <body>
+  <div id="wrap">
    <div id="allcontent">
     <div id="header">
 	<p id="family">Family Cookbook</p>
@@ -46,35 +35,24 @@ window.location = "browse-recipes.html";
 	<div id ="recipeSearch">
         <form>
 		<label for="search"</label>
-		<input type="search" id ="search" placeholder="Enter recipe name">
+		<input type="text" id ="search" placeholder="Enter recipe name">
 		<input type="button" id="search_recipe" value="Search" onClick="viewRecipe()">
 		<input type="button" id="browse_recipe" value = "Browse recipes" onClick = "browseRecipe()">
 		<input type="button" id="add_recipe" value = "Add a recipe" onclick="goToAddRecipePage()">
 
 	</form>
-	
-		<div id="example">
-			<div id="slides">
-				<div class="slides_container">
-					<a href="http://www.flickr.com/photos/jliba/4665625073/" title="145.365 - Happy Bokeh Thursday! | Flickr - Photo Sharing!" target="_blank"><img src="http://slidesjs.com/examples/standard/img/slide-1.jpg" width="570" height="270" alt="Slide 1"></a>
-					<a href="http://www.flickr.com/photos/stephangeyer/3020487807/" title="Taxi | Flickr - Photo Sharing!" target="_blank"><img src="http://slidesjs.com/examples/standard/img/slide-2.jpg" width="570" height="270" alt="Slide 2"></a>
-					
-				</div>
-				<a href="#" class="prev"><img src="arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
-				<a href="#" class="next"><img src="arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
-			</div>
-			<img src="example-frame.png" width="739" height="341" alt="Example Frame" id="frame">
-		</div>
 	</div>
       </p>
       </div>
 
-    <div id="footer">
+
+   </div>
+   </div>
+       <div id="footer">
       &copy; 2011, Family CookBook
       <br />
       All trademarks and registered trademarks appearing on 
       this site are the property of their respective owners.
     </div>
-   </div>
   </body>
 </html>

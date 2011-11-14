@@ -4,19 +4,15 @@
 	<meta charset="utf-8">
 	<title>jQuery UI Accordion - Default functionality</title>
 	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
-	<script src="js/jquery.js"></script>
-	<script src="ui/jquery.ui.core.js"></script>
-	<script src="ui/jquery.ui.widget.js"></script>
-	<script src="ui/jquery.ui.accordion.js"></script>
-	<script src="ui/jquery.ui.dialog.js"></script>
-        <script src="ui/jquery.ui.tabs.js"></script>
-        <script src="ui/jquery.ui.widget.js"></script>
-
-	<link rel="stylesheet" href="starbuzz.css">
+	<script src="jquery.js"></script>
+	<script src="development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="development-bundle/ui/jquery.ui.accordion.js"></script>
+	<script src="development-bundle/ui/jquery.ui.dialog.js"></script>
+	<script src= "js/jquery.raty.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="view_recipe.css" />
+	<link rel="stylesheet" type="text/css" href="Template.css" />
 	<script>
-        $(function() {
-		$( "#tabs" ).tabs();
-	});
 	$(function() {
 			$( "#accordion" ).accordion({
 			autoHeight: false,
@@ -51,8 +47,12 @@
 			}
 	</script>
 </head>
-<body>
 
+
+
+
+<body>
+<div id="wrapper">
 <div id="allcontent">
 <div id="header">
 	<p id="family"><a href="home.html">Family Cookbook</a></p>
@@ -60,13 +60,8 @@
 <div id = "main">
 
 <label>Grammy's pie</label>
-<img src= "img/apple_pie.jpg" height="25%" width = "15%" alt= "Apple Pie" />
-<div id ="tabs">
-    <ul>
-	<li><a href="#tabs-1">Digital recipe</a></li>
-	<li><a href="#tabs-2">Handwritten recipe</a></li>
-    </ul>
-    <div id="tabs-1" >
+<img src="ratings.jpg" height = "15%" width ="10%" />
+<img src= "apple_pie.jpg" height="25%" width = "15%" alt= "Apple Pie" />
 <div id="accordion">
 	<h3><a href="#">Recipe information</a></h3>
 	<div>
@@ -85,7 +80,6 @@
 			<li>Flour</li>
 			<li>Eggs</li>
 			<li>Cooking oil </li>
-			<input type= "button" value = "Annotate with my ingredients" />
 		</ul>
 	</div>
 	<h3><a href="#">Recipe directions</a></h3>
@@ -113,21 +107,23 @@
 		</ul>
 	</div>
 </div>
-        </div>
-    <div id ="tabs-2" >
-        <img src="img/handwritten.jpg" />
-    </div>
-</div>
 <button id="create-user" onclick="dialogS()">Share recipe on social media</button>
 </div>
+
+<div id="memory_bar">
 </div>
 
-<div id ="share">
-
 </div>
 
 
+</div>
 
+<div id="footer">
+      &copy; 2011, Family CookBook
+      <br />
+      All trademarks and registered trademarks appearing on 
+      this site are the property of their respective owners.
+    </div> 	
 
 </body>
 </html>
