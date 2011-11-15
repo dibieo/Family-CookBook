@@ -171,7 +171,7 @@
 			buttons: {
 				"Share": function() {
                                   alert('Thanks! Your recipe has been shared online!');
-                                  $("#dialog-form").dialog('close');
+                                  $("#share-form").dialog('close');
 
 				},
 				Cancel: function() {
