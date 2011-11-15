@@ -2,68 +2,318 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>jQuery UI Accordion - Default functionality</title>
+	<title>Add a recipe</title>
 	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
 	<link rel="stylesheet" href="starbuzz.css">
-	<script src="jquery.js"></script>
-	<script src="development-bundle/ui/jquery.ui.core.js"></script>
-	<script src="development-bundle/ui/jquery.ui.widget.js"></script>
-	<script src="development-bundle/ui/jquery.ui.accordion.js"></script>
-	<script src="development-bundle/ui/jquery.ui.dialog.js"></script>
-	<script>
-	function addR(){
-	$("#addRecipe-form").html("<p>Your recipe has been added</p>");	
-	}
-	</script>
+	<script src="js/jquery.js"></script>
+       
+<style>
+body{
+		background-color:#aaaaaa;
+		font-family:Arial, sans-serif;
+		}
+
+	#container{
+		width:1000px;
+		margin:-30px auto 0 auto;
+		background-color:#aaaaaa;
+
+		}
+
+
+
+    img{
+    	border-style:none;
+    	}
+
+
+
+
+
+	.display-none{
+		display:none;
+		}
+
+	#middle{
+		clear:both;
+		background-color:#ffffff;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-box-shadow: 0px 0px 20px #000;
+		-webkit-box-shadow: 0px 0px 20px #000;
+		}
+
+	#form{
+		padding:3%;
+		}
+
+	.underline{
+		border-style:solid;
+		border-width:0 0 1px 0;
+		border-color:#666666;
+		}
+
+	.block{
+		display:block;
+		}
+
+	.next-button{
+		clear:both;
+		margin:40px 0 0 0;
+		}
+
+</style>
+<script>
+$(document).ready(function(){
+		$('a#next1').click(function(){
+			$('div#first').removeClass('block').addClass('display-none');
+			$('div#second').removeClass('display-none').addClass('block');
+			$('#formsteps').html('<img src="img/formsteps2.gif" alt="form steps 2">');
+		});// of click(
+
+		$('a#back1').click(function(){
+			$('div#first').removeClass('display-none').addClass('block');
+			$('div#second').removeClass('block').addClass('display-none');
+			$('span#formsteps').html('<img src="img/formsteps1.gif" alt="form steps 1">');
+		});// of click(
+
+
+		$('a#next2').click(function(){
+			$('div#second').removeClass('block').addClass('display-none');
+			$('div#third').removeClass('display-none').addClass('block');
+			$('#formsteps').html('<img src="img/formsteps3.gif" alt="form steps 3">');
+		});// of click(
+
+		$('a#back2').click(function(){
+			$('div#second').removeClass('display-none').addClass('block');
+			$('div#third').removeClass('block').addClass('display-none');
+			$('#formsteps').html('<img src="img/formsteps2.gif" alt="form steps 2">');
+		});// of click(
+
+		$('a#next3').click(function(){
+			$('div#third').removeClass('block').addClass('display-none');
+			$('div#fourth').removeClass('display-none').addClass('block');
+			$('#formsteps').html('<img src="img/formsteps4.gif" alt="form steps 3">');
+		});// of click(
+
+		$('a#back3').click(function(){
+			$('div#third').removeClass('display-none').addClass('block');
+			$('div#fourth').removeClass('block').addClass('display-none');
+			$('#formsteps').html('<img src="img/formsteps3.gif" alt="form steps 2">');
+		});// of click(
+
+		$('a#next4').click(function(){
+			$('div#fourth').removeClass('block').addClass('display-none');
+			$('div#fifth').removeClass('display-none').addClass('block');
+			$('#formsteps').html('<img src="img/formsteps5.gif" alt="form steps 3">');
+		});// of click(
+
+		$('a#back4').click(function(){
+			$('div#fourth').removeClass('display-none').addClass('block');
+			$('div#fifth').removeClass('block').addClass('display-none');
+			$('#formsteps').html('<img src="img/formsteps4.gif" alt="form steps 2">');
+		});// of click(
+			}); // end of $(
+</script>
 </head>
 <body>
+<div id="container">
+	<div id="header">
+		<h1>
+		My Family Cookbook
+		</h1>
+	</div><!--end of header div-->
+	<div id="middle">
+		<div id="form">
+			<h2 class="underline">
+			Add a recipe:
+			</h2>
+			<span id="formsteps">
+			<img src="img/formsteps1.gif" alt="form steps">
+			</span>
+			<form action="home.html" method="post" name="ajaxish" id="ajaxish">
+			<div id="first" class="block">
+			<p>
+			Recipe Name:    <input type="text" id="fname" name="rname">
+			</p>
+			<p>
+			Recipe Creator: <input type="text" id="fname" name="rcreator">
+			</p>
+			<p>
+			Occasion: <select name="work">
+				<option value="Christmas">Christmas</option>
+				<option value="Thanksgiving">Thanksgiving</option>
+				<option value="Birthday">Birthday</option>
+				<option value="Illness">Illness</option>
+				<option value="Hannukah">Hannukah</option>
+				<option value="Independence Day">Independence day</option>
+				<option value="Barbecue">Barbecue</option>
+			</select>
+			</p>
+			<p>
+			Course: <select name="work2">
+				<option value="Appetizer">Appetizer</option>
+				<option value="Breakfast">Breakfast</option>
+				<option value="Lunch">Lunch</option>
+				<option value="Dinner">Dinner</option>
+				<option value="Dessert">Dessert</option>
+			</select>
+			</p>
+			Recipe Description: <br>
+			<textarea rows="10" cols="50">
+			</textarea>
+			<li><label>Upload a picture of the handwritten recipe</label>
+			<br>
+			<input id =" recipe_pic" type = "file" /></li>
+			<li><label>Upload pictures of the meal</label>
+			<br>
+			<input id =" recipe_pic" type = "file" /></li>
+			<input id =" recipe_pic" type = "file" /></li>
+			<br>
+			<input id =" recipe_pic" type = "file" /></li>
+			<br>
+			<input id =" recipe_pic" type = "file" /></li>
+			<br>
+			<input id =" recipe_pic" type = "file" /></li>
+			<div class="next-button">
+ 			<a id="next1" href="#"><img src="img/continue.gif" alt="next button"></a>
+ 			</div><!--end of next-button div-->
+			</div><!--end of first div-->
+			<div id="second" class="display-none">
+			<table border="1">
+			<tr>
+			<th>Amount</th>
+			<th>Unit</th>
+			<th>Ingredient</th>
+			<th>Info</th>
+			</tr>
+			<tr>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="15"></td>
+			<td><input type="text" id="amnt1" size="30"></td>
+			</tr>
+			<tr>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="15"></td>
+			<td><input type="text" id="amnt1" size="30"></td>
+			</tr>
+			<tr>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="15"></td>
+			<td><input type="text" id="amnt1" size="30"></td>
+			</tr>
+			<tr>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="15"></td>
+			<td><input type="text" id="amnt1" size="30"></td>
+			</tr>
+			<tr>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="15"></td>
+			<td><input type="text" id="amnt1" size="30"></td>
+			</tr>
+			<tr>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="15"></td>
+			<td><input type="text" id="amnt1" size="30"></td>
+			</tr>
+			<tr>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="8"></td>
+			<td><input type="text" id="amnt1" size="15"></td>
+			<td><input type="text" id="amnt1" size="30"></td>
+			</tr>
+			</table>
 
-
-<div id ="allcontent" class = "add_recipe">
-<div id="header">
-	<p id="family"><a href = "home.html">Family Cookbook </a></p>
-    </div>
-<div id="addRecipe-form" title="Share recipe with others outside your network">
-	<form id ="recipe">
-	<fieldset>
-		<legend>Recipe Information</legend>
-		<li><label>Recipe name</label>
-		<input id = "recipename" type ="text" placeholder = ""></input></li>
-		<li><label>Upload picture of meal</label><input id =" recipe_pic" type = "file" /></li>
-		<li><label>Recipe category </label><input id = "recipe_cat" type = "text" placeholder = "" width ="10px"/></li>
-		<li>
-		<label>When did you have this meal?</label><input id = "date_picker" type = "date" placeholder = "When did you create this meail" /></li>
-		<li><label>Upload a picture of the meal event</label><input id ="memories" type ="file"/></li>
-	</fieldset>
-	<fieldset>
-	<legend>Recipe Directions</legend>
-		<li><label>Step 1</label><input id = "Step 1" type ="text" placeholder = ""/></li>
-		<li><label>Step 2</label><input id = "Step 2" type = "text" placeholder = "" /></li>
-		<li><label>Step 3</label><input id = "Step 3" type = "text" placeholder = "" /></li>
-		<a href = "">Add another step</a>
-	</fieldset>
-	
-	<fieldset>
-	<legend>Recipe Ingredients</legend>
-		<li><label>Ingredient 1</label><input id = "ing 1" type ="text" placeholder = "" /></li>
-		<li><label>Ingredient 2</label><input id = "ing 2" type = "text" placeholder = "" /></li>
-		<li><label>Ingredient 3</label><input id = "ing 3" type = "text" placeholder = "" /></li>	
-		<a href = "">Add another ingredient</a>
-	</fieldset>
-	
-	
-	<fieldset>
-	<legend>Recipe Contact info</legend>
-		<li><label>Name</label><input id = "contact_name" type ="text" placeholder = "Enter contact name" /></li>
-		<li><label>Email</label><input id = "contact_email" type = "email" placeholder = "Enter email address " /></li>
-		<li><label>Phone number</label><input id = "contact_phone" type = "text" placeholder = "Enter contact phone number" /></li>	
-		<a href = "">Add another contact</a>
-
-	</fieldset>
-	</form>
-</div>
-<button id="addRecipe" onclick="addR()">Add recipe</button>
-<button id="create-user">Share recipe</button>
-
+			<div class="next-button">
+ 			<a id="back1" href="#"><img src="img/back.gif" alt="back button"></a>
+ 			<a id="next2" href="#"><img src="img/continue.gif" alt="next button"></a>
+ 			</div><!--end of next-button div-->
+			</div><!--end of second div-->
+			<div id="third" class="display-none">
+			<p>Directions:<br>
+			<table border="1">
+			<tr>
+			<th>Step</th>
+			<th>Description</th>
+			</tr>
+			<tr>
+			<td>1</td>
+			<td><input type="text" id="amnt1" size="100"></td>
+			</tr>
+			<tr>
+			<td>2</td>
+			<td><input type="text" id="amnt1" size="100"></td>
+			</tr>
+			<tr>
+			<td>3</td>
+			<td><input type="text" id="amnt1" size="100"></td>
+			</tr>
+			<tr>
+			<td>4</td>
+			<td><input type="text" id="amnt1" size="100"></td>
+			</tr>
+			<tr>
+			<td>5</td>
+			<td><input type="text" id="amnt1" size="100"></td>
+			</tr>
+			<tr>
+			<td>6</td>
+			<td><input type="text" id="amnt1" size="100"></td>
+			</tr>
+			<tr>
+			<td>7</td>
+			<td><input type="text" id="amnt1" size="100"></td>
+			</tr>
+			</table>
+			</p>
+			<div class="next-button">
+ 			<a id="back2" href="#"><img src="img/back.gif" alt="back button"></a>
+ 			<a id="next3" href="#"><img src="img/continue.gif" alt="next button"></a>
+ 			</div><!--end of next-button div-->
+			</div><!--end of third div-->
+			<div id="fourth" class="display-none">
+			<p>Memories:<br>
+			<input type="text" id="date" size="50" placeholder="Enter date of memory event" onclick="this.value'';">
+			<input type="text" id="descript" size="100" placeholder="Enter description of memory event" onclick="this.value'';">
+			<br/>
+			<p>Upload a picture or video</p>
+			<input id ="memory_pic1" type = "file" /></li>
+			<input id ="memory_pic2" type = "file" /></li>
+			<input id ="memory_pic3" type = "file" /></li>
+			<br/>
+			<a href="#">Add Another Memory</a>
+			</p>
+			<div class="next-button">
+ 			<a id="back3" href="#"><img src="img/back.gif" alt="back button"></a>
+ 			<a id="next4" href="#"><img src="img/continue.gif" alt="next button"></a>
+			</div></div>
+			<div id="fifth" class="display-none">
+			<p>Contact Info:<br>
+			<p>
+			Contact Name:    <input type="text" id="fname" name="rname">
+			</p>
+			<p>
+			Email Address:    <input type="text" id="fname" name="rname">
+			</p>
+			<p>
+			Phone Number:    <input type="text" id="fname" name="rname">
+			</p>
+			</p>
+			<div class="next-button">
+ 			<a id="back4" href="#"><img src="img/back.gif" alt="back button"></a>
+ 			<input type="submit" name="submit" id="submit" value="Submit" onclick="alert('Your recipe has been added to your family cookbook!');">
+			</div>
+			</div>
+			</form>
+			</div><!--end of form div-->
+			</div><!--end of middle div-->
+			</div><!--end of container div-->
 </body>
 </html>
