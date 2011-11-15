@@ -11,14 +11,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
 <script src="js/slides.min.jquery.js"></script>
+<script src="js/home.js"></script>
 <script>
 $(function(){
 $('#slides').slides({
-preload: true,
-preloadImage: 'img/loading.gif',
-//play: 5000,
-//pause: 2500,
-hoverPause: true
+    preload: true,
+    preloadImage: 'img/loading.gif',
+    play: 5000,
+    pause: 2500,
+    hoverPause: true
 });
 });
 </script>
@@ -33,6 +34,7 @@ hoverPause: true
 <input type="button" id="search_recipe" value="Search" onClick="viewRecipe()">
 <input type="button" id="browse_recipe" value = "Browse recipes" onClick = "browseRecipe()">
 <input type="button" id="add_recipe" value = "Add a recipe" onclick="goToAddRecipePage()">
+<input type ="button" id="request_recipe" value ="Request a recipe" onclick="requestRecipe()">
 </form>
 </div>
 
