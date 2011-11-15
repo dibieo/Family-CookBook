@@ -2,17 +2,18 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>jQuery UI Accordion - Default functionality</title>
+	<title>View recipe</title>
 	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
        `<link rel="stylesheet" href="css/jquery.ui.all.css">
-        <link rel="stylesheet" href="css/starbuzz2.css">
-
+        <link rel="stylesheet" href="css/view_recipe.css"
+        <link rel="stylesheet" href="css/Template.css">
 	<script src="js/jquery.js"></script>
 	<script src="ui/jquery.ui.core.js"></script>
 	<script src="ui/jquery.ui.widget.js"></script>
 	<script src="ui/jquery.ui.accordion.js"></script>
 	<script src="ui/jquery.ui.dialog.js"></script>
         <script src="ui/jquery.ui.tabs.js"></script>
+        <script src="ui/jquery.ui.mouse.js"></script>
         <script src="ui/jquery.ui.widget.js"></script>
         <script src="ui/jquery.ui.button.js"></script>
         <script src="ui/jquery.ui.draggable.js"></script>
@@ -26,12 +27,32 @@
 		h1 { font-size: 1.2em; margin: .6em 0; }
 	
         </style>
-        <script>
+	<link rel="stylesheet" type="text/css" href="view_recipe.css" />
+	<link rel="stylesheet" type="text/css" href="Template.css" />
+	<script>
 
+        $(function(){
+            $("#tabs").tabs()
+        });
         </script>
-</head>
-<body>
+        <script>
+	$(function() {
+			$( "#accordion" ).accordion({
+			autoHeight: false,
+			navigation: true,
+			animated: 'easeslide' 
 
+			});
+	});
+	</script>
+
+</head>
+
+
+
+
+<body>
+<div id="wrapper">
 <div id="allcontent">
 <div id="header">
 	<p id="family"><a href="home.html">Family Cookbook</a></p>
@@ -42,10 +63,10 @@
 <img src= "img/apple_pie.jpg" height="25%" width = "15%" alt= "Apple Pie" />
 <div id ="tabs">
     <ul>
-	<li><a href="#tabs-1">Digital recipe</a></li>
-	<li><a href="#tabs-2">Handwritten recipe</a></li>
-    </ul>
-    <div id="tabs-1" >
+		<li><a href="#tabs-1">Digital recipe</a></li>
+		<li><a href="#tabs-2">Handwritten recipe</a></li>
+	</ul>
+    <div id ="tabs-1">
 <div id="accordion">
 	<h3><a href="#">Recipe information</a></h3>
 	<div>
@@ -80,10 +101,10 @@
 			<li>Add eggs to the mix</li>
 			<li>Add 2 pinches of sugar</li>
 			<li>Pour mix unto baking pan </li>
-                     <button id="annotate-dir" onclick="">Annotate with my directions</button>
-
-
+         
 		</ul>
+                 <a href="#" id ="other-step">Jack M's steps</a>
+                 <button id="annotate-dir" onclick="">Annotate with my directions</button>
 	</div>
 	<h3><a href="#">Recipe contact info</a></h3>
 	<div>
@@ -103,6 +124,7 @@
         <img src="img/handwritten.jpg" width="300px" height="300px" />
     </div>
 </div>
+</div>
 <button id="share-recipe" onclick="dialogS()">Share recipe on social media</button>
 </div>
 
@@ -112,11 +134,12 @@
     <div id ="memory"><img src="img/family-applePie.jpg" width="250" height="130" alt="Slide 3" />
         <span id ="memText">Apple pie competition </span></div>
     <div id ="meal"><img src ="img/apple_pie.jpg" width="100" height = "100"/><span id ="foodText">Apple Pie.<br> Added by Karen Joe</br></span></div>
-
-<video width="320" height="240" controls="controls">
+  <video width="320" height="240" controls="controls">
   <source src="img/movie.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
+  </div>
+
 
   <div id ="meal"><img src ="img/roast.jpg" width="100" height = "100"/>
    <span id ="foodText">Roast potato.<br> Added by Joe F</br></span>
@@ -178,12 +201,19 @@
     
   </div>
 <div id ="share">
-
+<button id="create-user" onclick="dialogS()">Share recipe on social media</button>
 </div>
 
+<div id="memory_bar">
 </div>
 
 
+<div id="footer">
+      &copy; 2011, Family CookBook
+      <br />
+      All trademarks and registered trademarks appearing on 
+      this site are the property of their respective owners.
+    </div> 	
 
 </body>
 </html>
