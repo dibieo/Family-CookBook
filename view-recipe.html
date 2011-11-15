@@ -135,17 +135,16 @@
       <p>Memory Timeline</p>
     <div id ="memory"><img src="img/family-applePie.jpg" width="250" height="130" alt="Slide 3" />
         <span id ="memText">Apple pie competition </span></div>
-    <div id ="meal"><img src ="img/apple_pie.jpg" width="100" height = "100"/><span id ="foodText">Apple Pie.<br> Added by Karen Joe</br></span></div>
   <video width="320" height="240" controls="controls">
   <source src="img/movie.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
+
+ 
+   <button id="add-memory">Add my memory to the timeline</button>
   </div>
 
 
-  <div id ="meal"><img src ="img/roast.jpg" width="100" height = "100"/>
-   <span id ="foodText">Roast potato.<br> Added by Joe F</br></span>
-  </div>
 
 
 
@@ -216,6 +215,7 @@
 	</form>
 </div>
 
+
     
   </div>
 
@@ -224,6 +224,19 @@
 </div>
 
 
+    <div id="addMemory-form" title="Add your memories to the timeline">
+	<form>
+	<fieldset>
+                <div id ="memory-pic">
+                    <input type="text" placeholder="When did this event occur" class="text ui-widget-content ui-corner-all" />
+                    <input type="text" placeholder="Enter a description of the event" class="text ui-widget-content ui-corner-all" />
+                    <label>Upload a picture</label><input type="file" name="upload-pic" id="upload-memory" value ="Upload a picture of a memory" />
+                    <label>Upload a video</label><input type ="file" name ="upload-video" id="upload-video"  value ="Upload a video of memory" />
+                    </div>
+
+	</fieldset>
+	</form>
+</div>
 <div id="footer">
       &copy; 2011, Family CookBook
       <br />

@@ -188,3 +188,34 @@
 				$( "#share-form" ).dialog( "open" );
 			});
 	});
+
+        $(function() {
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		//$( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+
+		$( "#addMemory-form" ).dialog({
+			autoOpen: false,
+			height: 450,
+			width: 500,
+			modal: true,
+			buttons: {
+				"Add Memory": function() {
+                                  alert('Thanks! Your memories have been added to the time line');
+                                  $("#addMemory-form").dialog('close');
+
+				},
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+			},
+			close: function() {
+			}
+		});
+
+		$("#add-memory")
+			.button()
+			.click(function() {
+				$( "#addMemory-form" ).dialog( "open" );
+			});
+	});
