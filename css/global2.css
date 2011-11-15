@@ -1,4 +1,4 @@
-/* 
+]/*
 	Resets defualt browser settings
 	reset.css
 */
@@ -16,7 +16,7 @@ blockquote,q { quotes:"" ""; }
 	Page style
 */
 
-body { 
+body {
 	font:normal 62.5%/1.5 Helvetica, Arial, sans-serif;
 	letter-spacing:0;
 	color:#434343;
@@ -41,13 +41,6 @@ body {
 	position:relative;
 }
 
-#ribbon {
-	position:absolute;
-	top:-3px;
-	left:-15px;
-	z-index:500;
-}
-
 #frame {
 	position:absolute;
 	z-index:0;
@@ -65,7 +58,7 @@ body {
 #meal {
 
  padding-left: 400px;
- padding-bottom: 150px;
+ padding-bottom: 0px;
 }
 
 /*
