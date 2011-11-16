@@ -10,7 +10,7 @@ body {
     font-size: small;
 }
 #header {
-    height: 108px;
+    height: auto;
     color: #EFE5D0;
     background-color: #8B1A1A;
 }

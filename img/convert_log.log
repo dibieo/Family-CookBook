@@ -1,0 +1,52 @@
+2011-11-16 12:44:49,481 [info] logfile 9396 - --------------------------------------------
+2011-11-16 12:44:49,481 [info] logfile 9396 - Convert Options:FileName:C:\Users\OVO\Desktop\HTML5\UCD\FamilyCookBook\img\Aylah eating her first banana muffin.mp4,FileExt:.mp4,FileFormat:,AudioCodec:libfaac,AudioPreset:
+AudioChannels:2,AudioSampleRate:44100,AudioBitrate:128000,AudioTag:,AudioVolume:256
+VideoCodec:mpeg4,VideoBitrate:1500000,VideoPreset:,FrameRate:30.00
+
+2011-11-16 12:44:49,481 [info] logfile 9396 - Input File:File Name: C:\Users\OVO\Documents\Aylah eating her first banana muffin.flv
+Format Name: flv
+Format Long Name: FLV format
+File Size: 736.28 KB
+Duration: 00:00:14.419
+StartTime: 0.000000
+Bit Rate: 96 kb/s
+Metadata:
+  creationdate    : Sun Mar 02 17:59:02 2008
+
+  duration        : 14
+  framerate       : 15
+  height          : 360
+  lastkeyframetimestamp: 0
+  lasttimestamp   : 14315
+  width           : 480
+Stream #0, 1/1000: Video: vp6f, yuv420p, 480x360, 44.83 tbr, 1k tbn, 1k tbc, StartTime: 0.000000, Duration: N/A
+Stream #1, 1/1000: Audio: mp3, 11025 Hz, 1 channels, s16, 96 kb/s, StartTime: 0.000000, Duration: N/A
+
+2011-11-16 12:44:49,481 [info] logfile 9396 - Format ID:1800
+2011-11-16 12:44:49,481 [info] logfile 9396 - --------------------------------------------
+2011-11-16 13:50:09,601 [info] logfile 6496 - --------------------------------------------
+2011-11-16 13:50:09,601 [info] logfile 6496 - Convert Options:FileName:C:\Users\OVO\Desktop\HTML5\UCD\FamilyCookBook\img\Aylah eating her first banana muffin.mp4,FileExt:.mp4,FileFormat:,AudioCodec:libfaac,AudioPreset:
+AudioChannels:2,AudioSampleRate:44100,AudioBitrate:128000,AudioTag:,AudioVolume:256
+VideoCodec:mpeg4,VideoBitrate:1500000,VideoPreset:,FrameRate:30.00
+
+2011-11-16 13:50:09,601 [info] logfile 6496 - Input File:File Name: C:\Users\OVO\Documents\Aylah eating her first banana muffin.flv
+Format Name: flv
+Format Long Name: FLV format
+File Size: 736.28 KB
+Duration: 00:00:14.419
+StartTime: 0.000000
+Bit Rate: 96 kb/s
+Metadata:
+  creationdate    : Sun Mar 02 17:59:02 2008
+
+  duration        : 14
+  framerate       : 15
+  height          : 360
+  lastkeyframetimestamp: 0
+  lasttimestamp   : 14315
+  width           : 480
+Stream #0, 1/1000: Video: vp6f, yuv420p, 480x360, 44.83 tbr, 1k tbn, 1k tbc, StartTime: 0.000000, Duration: N/A
+Stream #1, 1/1000: Audio: mp3, 11025 Hz, 1 channels, s16, 96 kb/s, StartTime: 0.000000, Duration: N/A
+
+2011-11-16 13:50:09,601 [info] logfile 6496 - Format ID:1800
+2011-11-16 13:50:09,601 [info] logfile 6496 - --------------------------------------------

@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<title>View recipe</title>
 	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
-       `<link rel="stylesheet" href="css/jquery.ui.all.css">
-        <link rel="stylesheet" href="css/view_recipe.css"
-        <link rel="stylesheet" href="css/Template.css">
+    <link rel="stylesheet" href="css/jquery.ui.all.css">
+	<link rel="stylesheet" type="text/css" href="css/view_recipe.css" />
+	<link rel="stylesheet" type="text/css" href="css/Template.css" />
 	<script src="js/jquery.js"></script>
 	<script src="ui/jquery.ui.core.js"></script>
 	<script src="ui/jquery.ui.widget.js"></script>
@@ -20,15 +20,6 @@
 	<script src="ui/jquery.ui.position.js"></script>
 	<script src="ui/jquery.ui.resizable.js"></script>
         <script src="js/view-recipe.js"></script>
-        <style>
-           label, input { display:block; }
-           input.text { margin-bottom:12px; width:95%; padding: .4em; }
-		fieldset { padding:0; border:0; margin-top:25px; }
-		h1 { font-size: 1.2em; margin: .6em 0; }
-	
-        </style>
-	<link rel="stylesheet" type="text/css" href="view_recipe.css" />
-	<link rel="stylesheet" type="text/css" href="Template.css" />
 	<script>
 
         $(function(){
@@ -52,11 +43,13 @@
 
 
 <body>
-<div id="wrapper">
+<div id="wrap">
 <div id="allcontent">
-<div id="header">
-	<p id="family"><a href="home.html">Family Cookbook</a></p>
- </div>
+    <div id="header">
+	<a href="home.html">
+		<img src="img/banner.png" alt="My Family Cookbook Banner" width="1024" height="200" />
+	</a>
+    </div>
 <div id = "main">
 
 <label>Banana muffins</label>
@@ -129,28 +122,23 @@
     <button id="share-meal">Share recipe on social media</button>
 </div>
 </div>
-</div>
 
-  
-  <div id ="sidebar">
+  <div id ="memory_bar">
       <p>Memory Timeline</p>
     <div id ="memory"><img src="img/kids-muffin.jpg" width="250" height="130" alt="Slide 3" />
         <span id ="memText">Maddie's 5th birthday</span></div>
   <video width="320" height="240" controls="controls">
-  <source src="img/movie.mp4" type="video/mp4" />
+  <source src="img/movie2.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
+</br>
+  <button id="add-memory">Add my memory to the timeline</button>
+  </div>
+</div>
+
+  
 
  
-   <button id="add-memory">Add my memory to the timeline</button>
-  </div>
-
-
-
-
-
- </div>
-
     <div id="dialog-form" title="Create new ingredient">
 	<p class="validateTips">All form fields are required.</p>
 
@@ -217,14 +205,6 @@
 </div>
 
 
-    
-  </div>
-
-
-<div id="memory_bar">
-</div>
-
-
     <div id="addMemory-form" title="Add your memories to the timeline">
 	<form>
 	<fieldset>
@@ -237,6 +217,8 @@
 
 	</fieldset>
 	</form>
+</div>
+
 </div>
 <div id="footer">
       &copy; 2011, Family CookBook

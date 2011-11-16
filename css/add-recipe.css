@@ -1,0 +1,43 @@
+
+    img{
+    	border-style:none;
+    	}
+
+
+
+
+
+	.display-none{
+		display:none;
+		}
+
+	#middle{
+		width:800px;
+		margin-left:auto;
+		margin-right:auto;
+		clear:both;
+		background-color:#ffffff;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-box-shadow: 0px 0px 20px #000;
+		-webkit-box-shadow: 0px 0px 20px #000;
+		}
+
+	#form{
+		padding:3%;
+		}
+
+	.underline{
+		border-style:solid;
+		border-width:0 0 1px 0;
+		border-color:#666666;
+		}
+
+	.block{
+		display:block;
+		}
+
+	.next-button{
+		clear:both;
+		margin:40px 0 0 0;
+		}

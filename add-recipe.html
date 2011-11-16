@@ -4,65 +4,9 @@
 	<meta charset="utf-8">
 	<title>Add a recipe</title>
 	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css">
-	<link rel="stylesheet" href="starbuzz.css">
+	<link rel="stylesheet" href="css/Template.css">
+	<link rel="stylesheet" href="css/add-recipe.css">
 	<script src="js/jquery.js"></script>
-       
-<style>
-body{
-		background-color:#aaaaaa;
-		font-family:Arial, sans-serif;
-		}
-
-	#container{
-		width:1000px;
-		margin:-30px auto 0 auto;
-		background-color:#aaaaaa;
-
-		}
-
-
-
-    img{
-    	border-style:none;
-    	}
-
-
-
-
-
-	.display-none{
-		display:none;
-		}
-
-	#middle{
-		clear:both;
-		background-color:#ffffff;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		-moz-box-shadow: 0px 0px 20px #000;
-		-webkit-box-shadow: 0px 0px 20px #000;
-		}
-
-	#form{
-		padding:3%;
-		}
-
-	.underline{
-		border-style:solid;
-		border-width:0 0 1px 0;
-		border-color:#666666;
-		}
-
-	.block{
-		display:block;
-		}
-
-	.next-button{
-		clear:both;
-		margin:40px 0 0 0;
-		}
-
-</style>
 <script>
 $(document).ready(function(){
 		$('a#next1').click(function(){
@@ -117,12 +61,13 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+<div id="wrap">
 <div id="container">
-	<div id="header">
-		<h1>
-		My Family Cookbook
-		</h1>
-	</div><!--end of header div-->
+<div id="header">
+	<a href="home.html"> 
+		<img src="img/banner.png" alt="My Family Cookbook Banner" width="1024" height="200" />
+	</a>
+    </div><!--end of header div-->
 	<div id="middle">
 		<div id="form">
 			<h2 class="underline">
@@ -315,5 +260,11 @@ $(document).ready(function(){
 			</div><!--end of form div-->
 			</div><!--end of middle div-->
 			</div><!--end of container div-->
+
+</div>
+<div id="footer">
+<br>&copy 2011 Family CookBook.</p>
+<p>Credit to Slide.js for the Jquery slideshow plugin</p>
+</div>
 </body>
 </html>
