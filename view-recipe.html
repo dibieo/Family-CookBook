@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/jquery.ui.all.css">
 	<link rel="stylesheet" type="text/css" href="css/view_recipe.css" />
 	<link rel="stylesheet" type="text/css" href="css/Template.css" />
+        <link rel="stylesheet" type="text/css" href=""/>
 	<script src="js/jquery.js"></script>
 	<script src="ui/jquery.ui.core.js"></script>
 	<script src="ui/jquery.ui.widget.js"></script>
@@ -20,22 +21,7 @@
 	<script src="ui/jquery.ui.position.js"></script>
 	<script src="ui/jquery.ui.resizable.js"></script>
         <script src="js/view-recipe.js"></script>
-	<script>
-
-        $(function(){
-            $("#tabs").tabs()
-        });
-        </script>
-        <script>
-	$(function() {
-			$( "#accordion" ).accordion({
-			autoHeight: false,
-			navigation: true,
-			animated: 'easeslide' 
-
-			});
-	});
-	</script>
+	
 
 </head>
 
@@ -47,7 +33,7 @@
 <div id="allcontent">
     <div id="header">
 	<a href="home.html">
-		<img src="img/banner.png" alt="My Family Cookbook Banner" width="1024" height="200" />
+		<img src="img/banner1280.png" alt="My Family Cookbook Banner" width="1024" height="200" />
 	</a>
     </div>
 <div id = "main">
@@ -58,6 +44,7 @@
     <ul>
 		<li><a href="#tabs-1">Digital recipe</a></li>
 		<li><a href="#tabs-2">Handwritten recipe</a></li>
+                <li><a href="#tabs-3">Comments on this recipe</a></li>
 	</ul>
     <div id ="tabs-1">
 <div id="accordion">
@@ -80,9 +67,6 @@
 			<li>Eggs</li>
 			<li>Cooking oil </li>
 		</ul>
-            <a href="#" id ="other-ing">K.J. ingredients</a>
-                <button id="annotate-ing">Annotate with my ingredients</button>
-
 	</div>
         
 	<h3><a href="#">Recipe directions</a></h3>
@@ -97,8 +81,6 @@
 			<li>Pour mix unto baking pan </li>
          
 		</ul>
-                 <a href="#" id ="other-step">Jack M's steps</a>
-                 <button id="annotate-dir" onclick="">Annotate with my directions</button>
 	</div>
 	<h3><a href="#">Recipe contact info</a></h3>
 	<div>
@@ -117,18 +99,30 @@
     <div id ="tabs-2" >
         <img src="img/handwritten.jpg" width="300px" height="300px" />
     </div>
+    <div id="tabs-3">
+        <ol>
+            <li> <br>Karen Joe on Dec 12 2009</br>"Muffins taste great with vegetable oil. Canola oil can work
+                 too"
+            </li>
+
+              <li> <br>Kevin Smith on Jan 30 2009</br>"Tastes really good when slightly burnt...Got my room mates drooling :)"
+            </li>
+
+        </ol>
+         <button id="post-comment">Comment on this recipe</button>
+    </div>
+
+
 </div>
 <div id ="share">
     <button id="share-meal">Share recipe on social media</button>
 </div>
-</div>
-
   <div id ="memory_bar">
       <p>Memory Timeline</p>
     <div id ="memory"><img src="img/kids-muffin.jpg" width="250" height="130" alt="Slide 3" />
         <span id ="memText">Maddie's 5th birthday</span></div>
   <video width="320" height="240" controls="controls">
-  <source src="img/movie2.mp4" type="video/mp4" />
+  <source src="img/movie.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 </br>
@@ -137,53 +131,18 @@
 </div>
 
   
+  
 
- 
-    <div id="dialog-form" title="Create new ingredient">
+ <div id="comment-form" title="Create new directions">
 	<p class="validateTips">All form fields are required.</p>
 
 	<form>
 	<fieldset>
-                <div id ="ingredients">
-                    <div id ="ingredient">
-                    <label for="name">Ingredient name</label>
-                    <input type="text" name="ingredientName" id="ingredientName" class="text ui-widget-content ui-corner-all" />
-                    </div></div>
-                <div id ="additional">
-                    <a href = "#" onclick="addIng()">Add another ingredient</a>
-                </div>
-	</fieldset>
-	</form>
-</div>
-    <div id="dialog-ing" title="Karen J's used this additional ingredients">
-        <p>I tried the following ingredients on Fri:</p>
-        <ol>
-            <li>12 pounds of sugar (made the crust really thick)</li>
-            <li>2 dozen eggs for a rich Meditteranean flavor </li>
-        </ol>
-        </div>
-
-     <div id="dialog-step" title="Jack M's steps are below">
-        <p>For a crusty taste try:</p>
-        <ol>
-            <li>Heat on 400 F for 25 minutes</li>
-            <li>Paint 2 litres of vegetable oil after baking</li>
-        </ol>
-        </div>
-
- <div id="direction-form" title="Create new directions">
-	<p class="validateTips">All form fields are required.</p>
-
-	<form>
-	<fieldset>
-                <div id ="directions">
-                    <div id ="direction">
-                    <label for="step">Step</label>
-                    <input type="text" name="step" id="step" class="text ui-widget-content ui-corner-all" />
-                    </div></div>
-                <div id ="additionalStep">
-                    <a href = "#" onclick="addStep()">Add another step</a>
-                </div>
+                    <div id ="comment">
+                    <label for="step">Comment</label>
+                    <textarea rows="10" cols="75" placeholder="Tried a new ingredient or step?Share your experience here" ></textarea>
+                    </div>
+                
 	</fieldset>
 	</form>
 </div>
@@ -228,4 +187,24 @@
     </div> 	
 
 </body>
+
+
+        <script>
+        $("#accordion").addClass("ui-accordion ui-accordion-icons ui-widget ui-helper-reset")
+  .find("h3")
+    .addClass("ui-accordion-header ui-helper-reset ui-state-default ui-corner-top ui-corner-bottom")
+    .hover(function() { $(this).toggleClass("ui-state-hover"); })
+    .prepend('<span class="ui-icon ui-icon-triangle-1-e"></span>')
+    .click(function() {
+      $(this)
+        .toggleClass("ui-accordion-header-active ui-state-active ui-state-default ui-corner-bottom")
+        .find("> .ui-icon").toggleClass("ui-icon-triangle-1-e ui-icon-triangle-1-s").end()
+        .next().toggleClass("ui-accordion-content-active").slideToggle();
+      return false;
+    })
+    .next()
+      .addClass("ui-accordion-content  ui-helper-reset ui-widget-content ui-corner-bottom")
+      .hide();
+
+	</script>
 </html>

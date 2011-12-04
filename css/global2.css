@@ -15,11 +15,13 @@ blockquote,q { quotes:"" ""; }
 /*
 	Page style
 */
-
 #example {
+	background: none repeat scroll 0 0 white;
 	width:600px;
-	height:350px;
+	height:300px;
 	position:relative;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 #frame {
@@ -28,7 +30,7 @@ blockquote,q { quotes:"" ""; }
 	width:739px;
 	height:341px;
 	top:-3px;
-	left:-80px;
+	left:-88px;
 }
 
 #memory {
@@ -48,9 +50,8 @@ padding-top:60px;
 */
 
 #slides {
-	position:absolute;
+	position:center;
 	top:15px;
-	left:4px;
 	z-index:100;
 }
 
@@ -93,7 +94,7 @@ padding-top:60px;
 #slides .next,#slides .prev {
 	position:absolute;
 	top:130px;
-	left:-103px;
+	left:-24px;
 	width:24px;
 	height:43px;
 	display:block;
@@ -101,7 +102,7 @@ padding-top:60px;
 }
 
 #slides .next {
-	left:671px;
+	left:600px;
 }
 
 /*
@@ -110,7 +111,7 @@ padding-top:60px;
 
 .pagination {
 	/* top right bottom left */
-	margin:65px auto 0;
+	margin: 50px auto 0;
 	padding-left: 50px;
 	width:100px;
 }

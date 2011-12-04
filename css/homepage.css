@@ -1,11 +1,17 @@
 #main {
     background: none repeat scroll 0 0 white;
     font-size: 105%;
-    height: auto;
-    margin: 10px auto 10px auto ;
-    padding: 15px;
-    width: 720px;
+    height: 350px;
+    margin: 10px auto 10px auto;
+    width: 680px;
+    border-style: double;
+    border-width: 8px;
+    padding: 16px;
+    background-color: #DCDCED
 }
 #recipe-form{
+	padding-top: 10px;]
+	align:center;
 	margin: 1px auto 1px auto;
+	width: 450px;
 }

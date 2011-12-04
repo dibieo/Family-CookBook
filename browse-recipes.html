@@ -14,16 +14,19 @@
 	<script>
 	$(function() {
 			$( "#accordion" ).accordion({
-			autoHeight: false,
+                        autoHeight: false,
 			navigation: true,
-			animated: 'easeslide' 
+			animated: 'easeslide',
 
 			});
 	});
 	
 	function addDinner() {
 	 
-		$("#sidebar").html("<img src='img/roast.jpg' width = '50%' height = '75%'/> <p> Roast dinner </p>");
+		$("#sidebar").html("<img src='img/roast.jpg' width = '20%' height = '25%'/> <p> Roast dinner </p>" +
+                                    "<img src='img/garlic-shrimp.jpg' width = '20%' height = '25%'/> <p> Roast dinner </p><br></br>" +
+                                    "<img src='img/chicken-peas.jpg' width = '20%' height = '25%'/> <p> Roast dinner </p><br></br>" +
+                                    "<img src='img/beef-stirfry.jpg' width = '20%' height = '25%'/> <p> Roast dinner </p>");
 	}
 	</script>
   </head> 
@@ -33,12 +36,20 @@
    <div id="allcontent">
     <div id="header">
 	<a href="home.html">
-		<img src="img/banner.png" alt="My Family Cookbook Banner" width="1024" height="200" />
+		<img src="img/banner1280.png" alt="My Family Cookbook Banner" width="1024" height="170" />
 	</a>
     </div>
 
     <div id="main">
      <div id="accordion">
+        <h3><a href="#">Time of the day (course)</a></h3>
+	<div>
+	<li><a href= "">Appetizer (4)</a></li>
+	<li><a href= "">Breakfast (3)</a></li>
+	<li><a href= "">Lunch (12)</a></li>
+	<li><a href= "#" onClick= "addDinner()">Dinner (16)</a></li>
+	<li><a href= "">Dessert(12)</a></li>
+	</div>
 	<h3><a href="#">Occasion</a></h3>
 	<div>
 	<li><a href= "">Thanksgiving (4)</a></li>
@@ -47,14 +58,7 @@
 	<li><a href= "">Independence Day (6)</a></li>
 	<li><a href= "">Hannukah (2)</a></li>
 	</div>
-	<h3><a href="#">Course</a></h3>
-	<div>
-	<li><a href= "">Appetizer (4)</a></li>
-	<li><a href= "">Breakfast (3)</a></li>
-	<li><a href= "">Lunch (12)</a></li>
-	<li><a href= "#" onClick= "addDinner()">Dinner (16)</a></li>
-	<li><a href= "">Dessert(12)</a></li>
-	</div>
+
 	<h3><a href="#">Creator</a></h3>
 	<div>
 	
@@ -71,6 +75,12 @@
 	<li><a href= "">Potatoes (5)</a></li>
 	<li><a href= "">Beef (2)</a></li>
 	<li><a href= "">Chicken (5)</a></li>
+	</div>
+        <h3><a href="#">Drinks</a></h3>
+	<div>
+	<li><a href= "">Fruit juices (4)</a></li>
+	<li><a href= "">Beers (3)</a></li>
+	<li><a href= "">Wines (2)</a></li>
 	</div>
 </div>
 

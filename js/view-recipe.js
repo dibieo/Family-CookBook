@@ -13,19 +13,17 @@
 
 
 	$(function() {
-		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-		//$( "#dialog:ui-dialog" ).dialog( "destroy" );
 
 
-		$( "#direction-form" ).dialog({
+		$( "#comment-form" ).dialog({
 			autoOpen: false,
 			height: 450,
 			width: 500,
 			modal: true,
 			buttons: {
 				"Save": function() {
-                                  alert('Thanks! Your direction(s) have been added!');
-                                  $("#direction-form").dialog('close');
+                                  alert('Thanks! Your comment has been added!');
+                                  $("#comment-form").dialog('close');
 
 				},
 				Cancel: function() {
@@ -36,23 +34,15 @@
 			}
 		});
 
-		$("#annotate-dir")
+		$("#post-comment")
 			.button()
 			.click(function() {
-				$( "#direction-form" ).dialog( "open" );
+				$( "#comment-form" ).dialog( "open" );
 			});
 	});
 
           $(function() {
 		$( "#tabs" ).tabs();
-	});
-	$(function() {
-			$( "#accordion" ).accordion({
-			autoHeight: false,
-			navigation: true,
-			animated: 'easeslide'
-
-			});
 	});
         function dialogS() {
 
@@ -61,101 +51,10 @@
 
 
             var num = 0;
-          function addIng(){
-
-             num = num + 1;
-             var text = $("#ingredient").clone();
-             var newId = "ingredient " + num;
-             text.attr("id", newId);
-             $("#ingredients").append(text);
-          }
+         
 
 
-	$(function() {
-		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-		//$( "#dialog:ui-dialog" ).dialog( "destroy" );
-
-
-		$( "#dialog-form" ).dialog({
-			autoOpen: false,
-			height: 450,
-			width: 500,
-			modal: true,
-			buttons: {
-				"Save": function() {
-                                  alert('Thanks! Your ingredient(s) have been added!');
-                                  $("#dialog-form").dialog('close');
-
-				},
-				Cancel: function() {
-					$( this ).dialog( "close" );
-				}
-			},
-			close: function() {
-			}
-		});
-
-		$("#annotate-ing")
-			.button()
-			.click(function() {
-				$( "#dialog-form" ).dialog( "open" );
-			});
-	});
-
-
-        $(function() {
-
-        // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-		//$( "#dialog:ui-dialog" ).dialog( "destroy" );
-
-
-		$( "#dialog-ing" ).dialog({
-			autoOpen: false,
-			height: 450,
-			width: 500,
-			modal: true,
-			buttons: {
-				"Ok": function() {
-                                  $("#dialog-ing").dialog('close');
-
-				}
-			},
-			close: function() {
-			}
-		});
-
-		$("#other-ing")
-			.click(function() {
-				$( "#dialog-ing" ).dialog( "open" );
-			});
-        });
-
-           $(function() {
-
-        // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-		//$( "#dialog:ui-dialog" ).dialog( "destroy" );
-
-
-		$( "#dialog-step" ).dialog({
-			autoOpen: false,
-			height: 450,
-			width: 500,
-			modal: true,
-			buttons: {
-				"Ok": function() {
-                                  $("#dialog-step").dialog('close');
-
-				}
-			},
-			close: function() {
-			}
-		});
-
-		$("#other-step")
-			.click(function() {
-				$( "#dialog-step" ).dialog( "open" );
-			});
-        });
+      
 
 
 	$(function() {
@@ -201,8 +100,8 @@
 			modal: true,
 			buttons: {
 				"Add Memory": function() {
-                                  alert('Thanks! Your memories have been added to the time line');
-                                  $("#addMemory-form").dialog('close');
+                                 alert('Thanks! Your memories have been added to the time line');
+                                  					$( this ).dialog( "close" );
 
 				},
 				Cancel: function() {
